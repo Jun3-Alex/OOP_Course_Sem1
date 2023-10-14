@@ -1,36 +1,45 @@
+package OOP_Course.Lesson1.Seminar.OOPSeminar1.src;
+
 import java.util.List;
 
-public class BottleOfWaterVendingMachine implements VendingMachine{
-    List<BottleOfWatter> bottleOfWatters;
+public class BottleOfWaterVendingMachine implements VendingMachine {
+    List<BottleOfWater> bottleOfWaters;
 
-    public BottleOfWaterVendingMachine(List<BottleOfWatter> products) {
-        this.bottleOfWatters = products;
+    public BottleOfWaterVendingMachine(List<BottleOfWater> products) {
+        this.bottleOfWaters = products;
     }
 
-    public List<BottleOfWatter> getBottleOfWatters() {
-        return bottleOfWatters;
+    public List<BottleOfWater> getBottleOfWaters() {
+        return bottleOfWaters;
     }
 
-    public void setBottleOfWatters(List<BottleOfWatter> bottleOfWatters) {
-        this.bottleOfWatters = bottleOfWatters;
+    public void setBottleOfWaters(List<BottleOfWater> bottleOfWaters) {
+        this.bottleOfWaters = bottleOfWaters;
     }
 
     @Override
     public Product getProduct(String name) {
-        for (BottleOfWatter item : bottleOfWatters) {
-            if(item.getName().equals(name))
+        for (BottleOfWater item : bottleOfWaters) {
+            if (item.getName().equals(name))
                 return item;
         }
         return null;
     }
-    public Product getProduct(String name, double volume){
-        for (BottleOfWatter bottle : bottleOfWatters) {
-            if(bottle.getName().equals(name) && bottle.getVolume() == volume)
+
+    public Product getProduct(String name, double volume) {
+        for (BottleOfWater bottle : bottleOfWaters) {
+            if (bottle.getName().equals(name) && bottle.getVolume() == volume)
                 return bottle;
         }
         return null;
     }
-    public void addBottleOfWater(BottleOfWatter bottleOfWatter){
-        this.bottleOfWatters.add(bottleOfWatter);
+
+    @Override
+    public Product getProduct(String name, double cost, int temperature) {
+        return null;
+    }
+
+    public void addBottleOfWater(BottleOfWater bottleOfWater) {
+        this.bottleOfWaters.add(bottleOfWater);
     }
 }

@@ -1,4 +1,4 @@
-import java.util.List;
+package OOP_Course.Lesson1.Seminar.OOPSeminar1.src;
 
 public abstract class Product {
     private String name;

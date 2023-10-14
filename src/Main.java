@@ -1,24 +1,22 @@
+package OOP_Course.Lesson1.Seminar.OOPSeminar1.src;
+
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        BottleOfWatter b1 = new BottleOfWatter("1", 1, 1);
-        BottleOfWatter b2 = new BottleOfWatter("2", 2, 2);
-        BottleOfWatter b3 = new BottleOfWatter("5", 4, 3);
-        BottleOfWatter b4 = new BottleOfWatter("15", 123, 1);
-        BottleOfWatter b5 = new BottleOfWatter("20", 6, 5);
 
-        BottleOfWaterVendingMachine vendingMachine = new BottleOfWaterVendingMachine(new ArrayList<>());
-        vendingMachine.addBottleOfWater(b1);
-        vendingMachine.addBottleOfWater(b2);
-        vendingMachine.addBottleOfWater(b3);
-        vendingMachine.addBottleOfWater(b4);
-        vendingMachine.addBottleOfWater(b5);
-        System.out.println(vendingMachine.getProduct("20", 5));
-        System.out.println(vendingMachine.getProduct("20", 100));
-//        for (BottleOfWatter b : vendingMachine.getBottleOfWatters()) {
-//            System.out.println(b);
-//        }
+        HotDrinks h1 = new HotDrinks("1", 1, 1, 1);
+        HotDrinks h2 = new HotDrinks("2", 2, 2, 2);
+        HotDrinks h3 = new HotDrinks("5", 4, 3, 3);
+        HotDrinks h4 = new HotDrinks("15", 123, 1, 4);
+        HotDrinks h5 = new HotDrinks("20", 6, 5, 5);
+
+        HotDrinksVendingMachine vendingMachine = new HotDrinksVendingMachine(new ArrayList<>());
+        vendingMachine.addHotDrinks(h1);
+        vendingMachine.addHotDrinks(h2);
+        vendingMachine.addHotDrinks(h3);
+        vendingMachine.addHotDrinks(h4);
+        vendingMachine.addHotDrinks(h5);
+        System.out.println(vendingMachine.getProduct("20", 5, 5));
     }
-
 }
